@@ -1,0 +1,20 @@
+# 用户信息
+user:
+  name: 小二上酒
+  first_name: #小二
+  last_name: #不胜
+  email: lzl102872@163.com
+  domain: http://1.12.54.22
+  avatar: https://www.imalun.com/images/avatar.jpg?v=1
+  describe: 天行健，君子以自强不息；地势坤，君子以厚德载物。
+  ruleText: <br/>
+
+# 图标
+favicon:
+  logo: https://count.getloli.com/get/@www.imalun.com?theme=rule34
+  #logo: favicon-32x32.png
+  icon16: favicon-16x16.png 
+  icon32: favicon-32x32.png
+  appleTouchIcon: apple-touch-icon.png
+  webmanifest: /site.webmanifest
+  visibilitychange: true
