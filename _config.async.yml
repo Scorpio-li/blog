@@ -100,9 +100,9 @@ footer:
 # rss: atom.xml
 
 # # 网页访问统计
-# webAnalytics:  
-#   enable: true 
-#   baidu: bbad9d8e1fd8e044d365c2ce0d114c73
+webAnalytics:  
+  enable: true 
+  baidu: 2e810e6b0658e975cbdc649863f12efa
 
 # cover:
 #   type: date
