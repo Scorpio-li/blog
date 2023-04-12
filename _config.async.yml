@@ -63,9 +63,9 @@ sidebar:
     - icon: fab fa-github
       url: https://github.com/Scorpio-li
       name: Github
-    - icon: iconfont cg-gitee
+    - icon: fab fa-gitlab
       url: https://gitlab.com/Scorpio-li
-      name: Gitee
+      name: Gitlab
     # - icon: icon-weibo
     #   url: https://weibo.com/u/5022481764
     #   name: Weibo
