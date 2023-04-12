@@ -1,0 +1,46 @@
+
+name: Update Package Version
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+     - name: Update package.json
+       run: |
+         node ./scripts/update-version.js ${{ github.event.release.tag_name }}
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+     - name: Set Git user
+       env:
+         GITHUB_ACTOR: ${{ github.actor }}
+         GITHUB_EMAIL: ${{ github.actor }}@users.noreply.github.com
+       run: |
+         git config --global user.name "${{ env.GITHUB_ACTOR }}"
+         git config --global user.email "${{ env.GITHUB_EMAIL }}"
+ 
+     - name: Commit changes
+       run: |
+         git add .
+         git commit -m "Update version to ${{ github.event.release.tag_name }} for release ${{ github.ref }}"
+         git_hash=$(git rev-parse --short HEAD)
+
+     - name: Push changes
+       uses: ad-m/github-push-action@master
+       with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Tag Push changes
+      run: |
+        git tag -f ${{ github.event.release.tag_name }} $git_hash
+        git push --force origin ${{ github.event.release.tag_name }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

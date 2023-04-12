@@ -9,7 +9,8 @@
     "server": "hexo server",
     "color": "hexo color",
     "new": "hexo new",
-    "start": "hexo server --draft"
+    "start": "hexo server --draft",
+    "version": "node ./scripts/update-version.js"
   },
   "hexo": {
     "version": "6.3.0"
