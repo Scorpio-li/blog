@@ -18,3 +18,186 @@ favicon:
   appleTouchIcon: apple-touch-icon.png
   webmanifest: /site.webmanifest
   visibilitychange: true
+
+# 头部菜单
+top_bars:
+  - title: menu.home
+    url: /
+  - title: menu.archives
+    url: /archives/
+  - title: menu.links
+    url: /links/
+  #- title: 树洞
+  #  url: /comment/
+  - title: menu.about
+    url: /about/
+    children:
+      - title: menu.projects
+        url: /projects/
+      - title: menu.forever
+        url: https://foreverblog.cn/go.html
+        noswup: true
+        target: _blank
+
+# 横幅配置
+banner:
+  index:
+    type: video
+    bgurl: //cdn.moji.com/websrc/video/autumn20190924.mp4
+    # bannerTitle: 树深时见鹿，<br>溪午不闻钟。
+    bannerTitle: 人的一生，<br>最恐惧的就是未知，<br>最懒惰的就是对于未知的探索。
+    bannerText: Hi my new friend!
+
+# 侧栏
+sidebar:
+  typedTextPrefix: I`m Derick
+  typedText: [ ', a Web Developer' ]
+  info: 
+    - key: sidebar.residence
+      val: Jupiter
+    - key: sidebar.city
+      val: ShenZhen
+    - key: sidebar.age
+      val: 29
+  social:
+    - icon: fab fa-github
+      url: https://github.com/Scorpio-li
+      name: Github
+    - icon: iconfont cg-gitee
+      url: https://gitlab.com/Scorpio-li
+      name: Gitee
+    # - icon: icon-weibo
+    #   url: https://weibo.com/u/5022481764
+    #   name: Weibo
+    # - icon: icon-rss
+    #   url: atom.xml
+    #   name: RSS
+
+# 页尾
+footer:
+  # Hexo link (Powered by Hexo).
+  powered:
+    enable: true
+  # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
+  # https://beian.miit.gov.cn/
+  beian:
+    enable: false
+    icp: 
+  # Copyright date
+  copyrightYear: 2023
+  # 
+  live_time:
+    enable: true
+    prefix: footer.tips
+    start_time: 10/28/1993 17:00:00 #计时开始时间
+  #
+  custom_text:
+
+# # 开启 Service Worker
+# sw: true
+
+# # rss 地址
+# rss: atom.xml
+
+# # 网页访问统计
+# webAnalytics:  
+#   enable: true 
+#   baidu: bbad9d8e1fd8e044d365c2ce0d114c73
+
+# cover:
+#   type: date
+
+# 查询
+search:
+  enable: true
+  type: local
+  preload: true
+  trigger: auto
+
+# # 捐赠
+# reward:
+#   enable: true
+#   methods:
+#     - name: 微信
+#       path: https://mp-8b005489-7724-4f8c-afdd-30192ff4f7ae.cdn.bspapp.com/cloudstorage/61a57135-2e65-4d51-8be1-03b8bd1c595e.jpg
+#     - name: 支付宝
+#       path: https://mp-8b005489-7724-4f8c-afdd-30192ff4f7ae.cdn.bspapp.com/cloudstorage/a21e9954-22f2-43fe-b3b0-3dba1fdde3ed.jpg
+#     - name: QQ
+#       path: https://mp-8b005489-7724-4f8c-afdd-30192ff4f7ae.cdn.bspapp.com/cloudstorage/69fb1903-d0dc-4169-9a02-1e76ec8e7761.jpg
+
+# 归档页
+archive:
+  type: more
+
+# 主题
+# theme: 
+#   switch: false 
+#   default: auto
+
+# # 版权信息
+# creative_commons:
+#   license: by-nc-sa
+#   language: deed.zh
+#   post: true
+#   clipboard: false
+
+# swup: true
+
+# toc:
+#   enable: true
+
+# assets:
+#   third_party_provider: https://npm.elemecdn.com
+#   icons: 
+#     type: symbol 
+#     css:
+#     js: //at.alicdn.com/t/c/font_3637590_i4hyyea14ur.js
+
+icons:
+  # 主题切换图标
+  sun: icon-sun
+  moon: icon-moon
+  # 首页视频播放
+  play: icon-yunhang
+  # 邮箱
+  email: icon-email
+  # 分类进入图标
+  next: icon-arrow-right
+  # 文章详情 日期
+  calendar: icon-rili
+  # 文章详情 时间
+  clock: icon-shijian
+  # 文章详情 作者
+  user: icon-yonghu
+  # 返回顶部 v1.1.3+
+  back_top: icon-backtop
+  # 查询 v1.1.5+
+  search: icon-chaxun
+  # 关闭 v1.1.5+
+  close: icon-guanbi
+  # 打赏 v1.1.7+
+  reward: icon-qiandai
+  # 用户信息和文章目录切换 v1.2.10+
+  user_tag: icon-yonghu1
+  toc_tag: icon-liebiao
+  # 右下角固定按钮 v1.2.11+
+  read: icon-yuedu
+  arrows: icon-arrows-h
+  # 代码块
+  double_arrows: icon-angle-double-down
+  copy: icon-copy
+
+highlight:
+  theme: true # 
+  title: mac # mac | default
+  copy: true # copy button
+  lang: true # show the code language
+  height_limit: 200 # unit: px
+
+# post_pagination: 
+#   enable: true 
+#   type: small # large || small
+
+# layout:
+#   fixed_btn: async/fixed-btn
+#   header_search: async/empty
