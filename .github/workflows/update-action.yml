@@ -17,12 +17,12 @@ jobs:
        run: |
          node ./scripts/update-version.js ${{ github.event.release.tag_name }}
        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         GITHUB_TOKEN: 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
     
      - name: Set Git user
        env:
-         GITHUB_ACTOR: ${{ github.actor }}
-         GITHUB_EMAIL: ${{ github.actor }}@users.noreply.github.com
+         GITHUB_ACTOR: lizhiliang
+         GITHUB_EMAIL: lzl102872@163.com
        run: |
          git config --global user.name "${{ env.GITHUB_ACTOR }}"
          git config --global user.email "${{ env.GITHUB_EMAIL }}"
@@ -36,11 +36,11 @@ jobs:
      - name: Push changes
        uses: ad-m/github-push-action@master
        with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
+         github_token: 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
 
     - name: Tag Push changes
       run: |
         git tag -f ${{ github.event.release.tag_name }} $git_hash
         git push --force origin ${{ github.event.release.tag_name }}
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: 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
