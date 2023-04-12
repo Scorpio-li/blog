@@ -17,7 +17,7 @@
   "dependencies": {
     "hexo": "^6.3.0",
     "hexo-all-minifier": "^0.5.3",
-    "hexo-deployer-git": "^2.0.0",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^2.1.1",
