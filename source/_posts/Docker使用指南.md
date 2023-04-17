@@ -39,6 +39,8 @@ Docker 技术的三大核心概念，分别是：镜像 Image、容器 Container
 
 如果是个人服务器且为 linux，可参考 [安装 docker](https://docs.docker.com/engine/install/centos/) ,它将 docker 与 docker compose 一并安装。
 
+[在CentOS上安装Docker Engine](https://dockerdocs.cn/engine/install/centos/index.html)
+
 ### 命令行安装
 
 Homebrew 的 Cask 已经支持 Docker for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装，执行如下命令：
@@ -298,9 +300,28 @@ CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT   
 404e88f0d90c        nginx               0.00%               1.395MiB / 1.796GiB   0.08%               632B / 1.27kB       0B / 0B             2
 ```
 
+- docker logs 查看容器日志logs
 
+### 移除
 
+- 停止运行容器并移除容器stop && rm
 
+```
+// 停止运行容器 docker stop<容器ID或容器名>
+docker stop dooringX-Admin
+
+// 移除容器 docker rm <容器ID或容器名>\
+docker rm dooringX-Admin
+
+// 查看当前容器
+docker container ls -a 
+```
+
+- 移除镜像 image rm
+
+```
+docker image rm doorxing-admin
+```
 
 
 
